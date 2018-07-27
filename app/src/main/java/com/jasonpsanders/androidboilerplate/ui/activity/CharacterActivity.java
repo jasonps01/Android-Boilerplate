@@ -1,4 +1,4 @@
-package com.hitherejoe.androidboilerplate.ui.activity;
+package com.jasonpsanders.androidboilerplate.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,8 +7,8 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 
-import com.hitherejoe.androidboilerplate.R;
-import com.hitherejoe.androidboilerplate.data.model.Character;
+import com.jasonpsanders.androidboilerplate.R;
+import com.jasonpsanders.androidboilerplate.data.model.Character;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
