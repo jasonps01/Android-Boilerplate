@@ -22,9 +22,12 @@ public interface ApplicationComponent {
 
     @ApplicationContext
     Context context();
-    Application application();
-    AndroidBoilerplateService androidBoilerplateService();
-    PreferencesHelper preferencesHelper();
-    DataManager dataManager();
 
+    Application application();
+
+    AndroidBoilerplateService androidBoilerplateService();
+
+    PreferencesHelper preferencesHelper();
+
+    DataManager dataManager();
 }

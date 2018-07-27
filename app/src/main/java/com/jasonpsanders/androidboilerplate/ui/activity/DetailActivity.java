@@ -1,4 +1,4 @@
-package com.jasonpsanders.androidboilerplate.ui.activity;
+package com.hitherejoe.androidboilerplate.ui.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 
-import com.jasonpsanders.androidboilerplate.R;
-import com.jasonpsanders.androidboilerplate.data.model.Character;
-import com.jasonpsanders.androidboilerplate.ui.fragment.DetailFragment;
+import com.hitherejoe.androidboilerplate.R;
+import com.hitherejoe.androidboilerplate.data.model.Character;
+import com.hitherejoe.androidboilerplate.ui.fragment.DetailFragment;
 
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ public class DetailActivity extends BaseActivity {
     ViewPager mBeaconDetailViewPager;
 
     private static final String EXTRA_CHARACTER =
-            "com.jasonpsanders.androidboilerplate.ui.activity.DetailActivity.EXTRA_CHARACTER";
+            "com.hitherejoe.androidboilerplate.ui.activity.DetailActivity.EXTRA_CHARACTER";
     private Character mCharacter;
 
     public static Intent getStartIntent(Context context, Character character) {

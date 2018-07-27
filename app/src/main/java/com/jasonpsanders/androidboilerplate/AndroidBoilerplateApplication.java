@@ -13,6 +13,10 @@ public class AndroidBoilerplateApplication extends Application {
 
     ApplicationComponent mApplicationComponent;
 
+    public static AndroidBoilerplateApplication get(Context context) {
+        return (AndroidBoilerplateApplication) context.getApplicationContext();
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -23,10 +27,6 @@ public class AndroidBoilerplateApplication extends Application {
                 .applicationModule(new ApplicationModule(this))
                 .build();
         mApplicationComponent.inject(this);
-    }
-
-    public static AndroidBoilerplateApplication get(Context context) {
-        return (AndroidBoilerplateApplication) context.getApplicationContext();
     }
 
     public ApplicationComponent getComponent() {

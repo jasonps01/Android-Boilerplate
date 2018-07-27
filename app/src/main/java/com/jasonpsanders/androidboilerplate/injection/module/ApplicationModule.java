@@ -39,5 +39,4 @@ public class ApplicationModule {
     AndroidBoilerplateService provideAndroidBoilerplateService() {
         return AndroidBoilerplateService.Factory.makeAndroidBoilerplateService(mApplication);
     }
-
 }

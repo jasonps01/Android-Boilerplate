@@ -41,6 +41,5 @@ public interface AndroidBoilerplateService {
                     .build();
             return retrofit.create(AndroidBoilerplateService.class);
         }
-
     }
 }

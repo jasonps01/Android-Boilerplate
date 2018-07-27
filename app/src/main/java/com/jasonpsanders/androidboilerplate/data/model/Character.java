@@ -9,6 +9,16 @@ import java.util.List;
 
 public class Character implements Parcelable {
 
+    public static final Parcelable.Creator<Character> CREATOR =
+            new Parcelable.Creator<Character>() {
+                public Character createFromParcel(Parcel source) {
+                    return new Character(source);
+                }
+
+                public Character[] newArray(int size) {
+                    return new Character[size];
+                }
+            };
     public String name;
     public String height;
     public String mass;
@@ -26,6 +36,25 @@ public class Character implements Parcelable {
     public List<String> species;
     public List<String> vehicles;
     public List<String> starships;
+
+    public Character() {
+    }
+
+    protected Character(Parcel in) {
+        this.name = in.readString();
+        this.height = in.readString();
+        this.mass = in.readString();
+        this.hairColor = in.readString();
+        this.skinColor = in.readString();
+        this.eyeColor = in.readString();
+        this.birthYear = in.readString();
+        this.gender = in.readString();
+        this.homeworld = in.readString();
+        this.films = in.createStringArrayList();
+        this.species = in.createStringArrayList();
+        this.vehicles = in.createStringArrayList();
+        this.starships = in.createStringArrayList();
+    }
 
     @Override
     public int describeContents() {
@@ -48,36 +77,6 @@ public class Character implements Parcelable {
         dest.writeStringList(this.vehicles);
         dest.writeStringList(this.starships);
     }
-
-    public Character() {
-    }
-
-    protected Character(Parcel in) {
-        this.name = in.readString();
-        this.height = in.readString();
-        this.mass = in.readString();
-        this.hairColor = in.readString();
-        this.skinColor = in.readString();
-        this.eyeColor = in.readString();
-        this.birthYear = in.readString();
-        this.gender = in.readString();
-        this.homeworld = in.readString();
-        this.films = in.createStringArrayList();
-        this.species = in.createStringArrayList();
-        this.vehicles = in.createStringArrayList();
-        this.starships = in.createStringArrayList();
-    }
-
-    public static final Parcelable.Creator<Character> CREATOR =
-            new Parcelable.Creator<Character>() {
-                public Character createFromParcel(Parcel source) {
-                    return new Character(source);
-                }
-
-                public Character[] newArray(int size) {
-                    return new Character[size];
-                }
-            };
 
     @Override
     public boolean equals(Object o) {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
@@ -24,9 +23,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:layout_scrollFlags="scroll|enterAlways"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
                 app:layout_collapseMode="pin"
-                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+                app:layout_scrollFlags="scroll|enterAlways" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
@@ -44,7 +43,7 @@
             android:padding="16dp"
             android:text="@string/text_lorem_ipsum"
             android:textColor="@color/black_87pc"
-            android:textSize="@dimen/text_body"/>
+            android:textSize="@dimen/text_body" />
 
     </android.support.v4.widget.NestedScrollView>
 

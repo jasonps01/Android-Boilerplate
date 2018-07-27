@@ -21,5 +21,4 @@ public class PreferencesHelper {
     public void clear() {
         mPref.edit().clear().apply();
     }
-
 }

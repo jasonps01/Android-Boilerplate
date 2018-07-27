@@ -20,10 +20,11 @@ import butterknife.ButterKnife;
 
 public class DetailFragment extends Fragment {
 
-    @Bind(R.id.recycler_detail) RecyclerView mDetailRecycler;
-    @Bind(R.id.text_no_data) TextView mNoDataText;
-
     private static final String ARG_ITEMS = "ARG_ITEMS";
+    @Bind(R.id.recycler_detail)
+    RecyclerView mDetailRecycler;
+    @Bind(R.id.text_no_data)
+    TextView mNoDataText;
     private List<String> mItems;
 
     public static DetailFragment newInstance(ArrayList<String> items) {

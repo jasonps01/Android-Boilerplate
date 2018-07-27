@@ -32,13 +32,19 @@ import timber.log.Timber;
 
 public class MainActivity extends BaseActivity {
 
-    @Bind(R.id.progress_indicator) ProgressBar mProgressBar;
-    @Bind(R.id.recycler_characters) RecyclerView mCharactersRecycler;
-    @Bind(R.id.swipe_container) SwipeRefreshLayout mSwipeRefresh;
-    @Bind(R.id.toolbar) Toolbar mToolbar;
+    @Bind(R.id.progress_indicator)
+    ProgressBar mProgressBar;
+    @Bind(R.id.recycler_characters)
+    RecyclerView mCharactersRecycler;
+    @Bind(R.id.swipe_container)
+    SwipeRefreshLayout mSwipeRefresh;
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
 
-    @Inject DataManager mDataManager;
-    @Inject CharacterAdapter mCharacterAdapter;
+    @Inject
+    DataManager mDataManager;
+    @Inject
+    CharacterAdapter mCharacterAdapter;
     private CompositeSubscription mSubscriptions;
 
     @Override
