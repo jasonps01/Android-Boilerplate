@@ -2,28 +2,27 @@ package com.jasonpsanders.androidboilerplate.injection.module;
 
 import android.app.Activity;
 import android.content.Context;
-
 import com.jasonpsanders.androidboilerplate.injection.ActivityContext;
-
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public class ActivityModule {
-    private Activity mActivity;
 
-    public ActivityModule(Activity activity) {
-        mActivity = activity;
-    }
+  private Activity mActivity;
 
-    @Provides
-    Activity provideActivity() {
-        return mActivity;
-    }
+  public ActivityModule(Activity activity) {
+    mActivity = activity;
+  }
 
-    @Provides
-    @ActivityContext
-    Context providesContext() {
-        return mActivity;
-    }
+  @Provides
+  Activity provideActivity() {
+    return mActivity;
+  }
+
+  @Provides
+  @ActivityContext
+  Context providesContext() {
+    return mActivity;
+  }
 }

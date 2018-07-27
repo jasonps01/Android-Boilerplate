@@ -6,10 +6,10 @@ option java_multiple_files = true;
 
 
 message MainMessage {
-    string foo = 1;
-    SubMessage bar = 2;
+  string foo = 1;
+  SubMessage bar = 2;
 }
 
 message SubMessage {
-    int32 count = 1;
+  int32 count = 1;
 }

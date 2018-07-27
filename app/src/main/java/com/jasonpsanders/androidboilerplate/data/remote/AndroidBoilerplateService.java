@@ -1,10 +1,8 @@
 package com.jasonpsanders.androidboilerplate.data.remote;
 
 import android.content.Context;
-
 import com.jasonpsanders.androidboilerplate.BuildConfig;
 import com.jasonpsanders.androidboilerplate.data.model.Character;
-
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -16,30 +14,30 @@ import rx.Observable;
 
 public interface AndroidBoilerplateService {
 
-    String ENDPOINT = "http://swapi.co/api/";
+  String ENDPOINT = "http://swapi.co/api/";
 
-    @GET("people/{personId}")
-    Observable<Character> getCharacter(@Path("personId") int id);
+  @GET("people/{personId}")
+  Observable<Character> getCharacter(@Path("personId") int id);
 
-    /********
-     * Factory class that sets up a new boilerplate service
-     *******/
-    class Factory {
+  /********
+   * Factory class that sets up a new boilerplate service
+   *******/
+  class Factory {
 
-        public static AndroidBoilerplateService makeAndroidBoilerplateService(Context context) {
-            OkHttpClient okHttpClient = new OkHttpClient();
-            HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-            logging.setLevel(BuildConfig.DEBUG ? HttpLoggingInterceptor.Level.BODY
-                    : HttpLoggingInterceptor.Level.NONE);
+    public static AndroidBoilerplateService makeAndroidBoilerplateService(Context context) {
+      OkHttpClient okHttpClient = new OkHttpClient();
+      HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+      logging.setLevel(BuildConfig.DEBUG ? HttpLoggingInterceptor.Level.BODY
+          : HttpLoggingInterceptor.Level.NONE);
 //            okHttpClient.interceptors().add(logging);
 
-            Retrofit retrofit = new Retrofit.Builder()
-                    .baseUrl(AndroidBoilerplateService.ENDPOINT)
-                    .client(okHttpClient)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
-                    .build();
-            return retrofit.create(AndroidBoilerplateService.class);
-        }
+      Retrofit retrofit = new Retrofit.Builder()
+          .baseUrl(AndroidBoilerplateService.ENDPOINT)
+          .client(okHttpClient)
+          .addConverterFactory(GsonConverterFactory.create())
+          .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+          .build();
+      return retrofit.create(AndroidBoilerplateService.class);
     }
+  }
 }

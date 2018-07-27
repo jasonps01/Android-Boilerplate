@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jasonpsanders.androidboilerplate" >
+  package="com.jasonpsanders.androidboilerplate">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
-    <application
-        android:name=".AndroidBoilerplateApplication"
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name=".ui.activity.MainActivity"
-            android:label="@string/label_main"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+  <application
+    android:allowBackup="true"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:name=".AndroidBoilerplateApplication"
+    android:theme="@style/AppTheme">
+    <activity
+      android:label="@string/label_main"
+      android:name=".ui.activity.MainActivity"
+      android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
 
-        <activity
-            android:name=".ui.activity.DetailActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name=".ui.activity.CharacterActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"/>
-    </application>
+    <activity
+      android:name=".ui.activity.DetailActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"/>
+    <activity
+      android:name=".ui.activity.CharacterActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.NoActionBar"/>
+  </application>
 
 </manifest>

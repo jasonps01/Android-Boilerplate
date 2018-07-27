@@ -2,32 +2,29 @@ package com.jasonpsanders.androidboilerplate.injection.component;
 
 import android.app.Application;
 import android.content.Context;
-
 import com.jasonpsanders.androidboilerplate.AndroidBoilerplateApplication;
 import com.jasonpsanders.androidboilerplate.data.DataManager;
 import com.jasonpsanders.androidboilerplate.data.local.PreferencesHelper;
 import com.jasonpsanders.androidboilerplate.data.remote.AndroidBoilerplateService;
 import com.jasonpsanders.androidboilerplate.injection.ApplicationContext;
 import com.jasonpsanders.androidboilerplate.injection.module.ApplicationModule;
-
-import javax.inject.Singleton;
-
 import dagger.Component;
+import javax.inject.Singleton;
 
 @Singleton
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
 
-    void inject(AndroidBoilerplateApplication androidBoilerplateApplication);
+  void inject(AndroidBoilerplateApplication androidBoilerplateApplication);
 
-    @ApplicationContext
-    Context context();
+  @ApplicationContext
+  Context context();
 
-    Application application();
+  Application application();
 
-    AndroidBoilerplateService androidBoilerplateService();
+  AndroidBoilerplateService androidBoilerplateService();
 
-    PreferencesHelper preferencesHelper();
+  PreferencesHelper preferencesHelper();
 
-    DataManager dataManager();
+  DataManager dataManager();
 }
